@@ -1,0 +1,17 @@
+# Dependency folders: the package relies on the DSH install for
+# @deepseek-ai/* and on node_modules only for ssh2 / yaml.
+node_modules/
+*/node_modules/
+.pnpm-store/
+.npmcache/
+
+# Local test scratch
+*.log
+*.tmp
+/tmp-*/
+
+# Editor / OS noise
+.DS_Store
+.idea/
+.vscode/
+*.swp

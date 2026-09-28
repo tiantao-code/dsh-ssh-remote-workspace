@@ -1,0 +1,12 @@
+# dsh-ssh-workspace bundle patch.
+#
+# Inserts one host-plane row. That row owns the remote-host store plus the
+# `ssh_workspace` tool, and mirrors every saved host into an Agent preset
+# (`ssh-<alias>`) whose composition replaces `ctx.fs` / `ctx.shell` with
+# SFTP/exec-backed providers from this same package.
+#
+# Install with `dsh plugin --profile <name> add link:<path>`; the manifest's
+# `dsh.bundle.patch` makes the profile append this bundle automatically.
+- insert:
+    - id: ssh-workspace
+      name: 'dsh-ssh-workspace'

@@ -1,0 +1,51 @@
+dsh-ssh-workspace
+Copyright 2026 the dsh-ssh-workspace authors
+
+This product is licensed under the Apache License, Version 2.0; the full
+license text is in the LICENSE file.
+
+-------------------------------------------------------------------------------
+Third-party components
+
+This product includes a modified, vendored copy of an Agent preset file:
+
+    preset-remote.yml
+
+derived from the DSH package
+
+    @deepseek-ai/dsh-web-app — presets/standard.patch.yml
+
+which is distributed under the MIT License:
+
+    MIT License
+
+    Copyright (c) 2026 DeepSeek
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+    IN THE SOFTWARE.
+
+All other code is an original implementation that talks to DSH only through its
+public plugin interfaces. Its runtime dependencies are listed in package.json;
+the peer dependencies (@deepseek-ai/cordis, @deepseek-ai/dsh-fs,
+@deepseek-ai/dsh-shell, @deepseek-ai/dsh-tools, @deepseek-ai/schemastery,
+react) are provided by the host DSH installation and are not redistributed here.
+
+The node_modules/ directory inside this source tree is local development
+scaffolding only (symlinks into the DSH installation); it is excluded from the
+package by the "files" field and from version control by .gitignore, and is
+never redistributed.
